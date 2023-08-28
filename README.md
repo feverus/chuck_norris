@@ -1,7 +1,1 @@
-boilerplate
-настроены:
-
-- typeScript
-- mobX
-- sass
-- ky
+Интерфейс для https://api.chucknorris.io

@@ -1,4 +1,4 @@
-GET http://site
+GET https://api.chucknorris.io/jokes/search?query=car
 
 
 

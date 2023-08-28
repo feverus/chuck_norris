@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'mobx-react'
-import Main from './components/main';
-import defaultStore from './store/defaultStore'
+import Main from '~Components/main';
+import searchDataStore from '~Store/searchDataStore'
 
 import  './index.module.scss'
 
 const stores = {
-  defaultStore,
+  searchDataStore,
 }
 
 const root = ReactDOM.createRoot(

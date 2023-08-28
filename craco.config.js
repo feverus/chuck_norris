@@ -3,9 +3,9 @@ module.exports = {
   webpack: {
     alias: {
       '~': path.resolve(__dirname, 'src'),
-      '~Api': resolvePath('src/api'),
-      '~Store': resolvePath('src/store'),
-      '~Components': resolvePath('src/components'),
+      '~Api': path.resolve(__dirname, 'src/api'),
+      '~Store': path.resolve(__dirname, 'src/store'),
+      '~Components': path.resolve(__dirname, 'src/components'),
     },
   },
 };

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import * as I from '~Store/storeInterfaces'
-import { UseMain } from './main.props'
+import searchDataStore from '~Store/searchDataStore'
+import {getApiSearch} from '~Api/getApi'
+import { UseSearchPrompt } from './searchPrompt.props'
 
-const useMain:UseMain = () => {    
+const useSearchPrompt:UseSearchPrompt = () => {    
 
     const [data, setData] = useState<number>(1)
 
@@ -26,4 +28,4 @@ const useMain:UseMain = () => {
         [state, api]
     )
 }
-export default useMain
+export default useSearchPrompt
