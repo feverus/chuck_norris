@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
-import * as I from '~Store/storeInterfaces'
-import searchDataStore from '~Store/searchDataStore'
-import {getApiSearch} from '~Api/getApi'
-import { UseSearchPrompt } from './searchPrompt.props'
 import {useDebounce} from '~Lib/useDebounce'
+import {getApiSearch} from '~Api/getApi'
+import searchDataStore from '~Store/searchDataStore'
+import { UseSearchPrompt } from './searchPrompt.props'
 
 const useSearchPrompt:UseSearchPrompt = () => {    
 
@@ -46,17 +45,8 @@ const useSearchPrompt:UseSearchPrompt = () => {
 		setValue(value)
 	}
 
-	const state = {
-		status: status,
-		inputRef: inputRef,
-	}
-
-	const api = {
-		handleInput:handleInput,
-	}
-
 	return (
-		[state, api]
+		[status, inputRef, handleInput]
 	)
 }
 export default useSearchPrompt

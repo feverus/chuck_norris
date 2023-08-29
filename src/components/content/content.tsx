@@ -6,6 +6,10 @@ import InfiniteScroll from 'react-infinite-scroller'
 
 export function Content() {
 	const [items, hasMore, getMore] = useContent()
+	const jokesStyle = searchDataStore.isUnmounting ?
+		C.jokes + ' ' + C.unmounting
+		:
+		C.jokes
 
 	return (
 		searchDataStore.searchData.length > 0 ? 
@@ -13,7 +17,7 @@ export function Content() {
 				pageStart={0}
 				loadMore={getMore}
 				hasMore={hasMore}
-				className={C.jokes}
+				className={jokesStyle}
 			>
 				{items.map(item => 
 					<Joke

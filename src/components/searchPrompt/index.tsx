@@ -5,4 +5,4 @@ export default
 	inject('searchDataStore')
 	(observer(SearchPrompt));
 
-export type { StateType, ApiType, UseSearchPrompt } from './searchPrompt.props'
+export type { UseSearchPrompt } from './searchPrompt.props'

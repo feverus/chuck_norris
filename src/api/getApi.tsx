@@ -1,7 +1,6 @@
-import ky from 'ky';
-
-import * as I from '../store/storeInterfaces';
-import urlApi  from './urlApi';
+import ky from 'ky'
+import * as I from '~Store/storeInterfaces'
+import urlApi  from './urlApi'
 
 export const getApiSearch = async (queryString: string): Promise<I.ApiSearchData|string> => {
 	try {

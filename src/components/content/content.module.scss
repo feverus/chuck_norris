@@ -1,5 +1,14 @@
 @import '../../global.modules.scss';
 
+@keyframes jokesIn {
+  0% {opacity: 0;transform: scale(0);}
+  100% {opacity: 1;transform: scale(1);}
+}
+@keyframes jokesOut {
+  0% {opacity: 1;transform: scale(1);}
+  100% {opacity: 0;transform: scale(0);}
+}
+
 .jokes {
   display: flex;
   align-content: flex-start;
@@ -7,49 +16,50 @@
   gap: 20px;
   flex-wrap: wrap;
   width: min(1600px, 100vw - 30px);
-  margin-bottom: 40px;
-}
-
-a {
-  text-decoration: none;
-}
-.jokeBlock {  
-  @media (max-width: 400px) {
-    flex-basis: 100%;
-    padding: 20px 20px 20px 20px;
-    .id, .date {
-      flex: 0 1 100%;
-    }
+  margin-bottom: 40px;  
+  &.unmounting .jokeBlock {
+    animation: jokesOut 200ms;
+    animation-fill-mode: forwards;
   }
-  flex: 1 0 calc(33% - 40px);
-  gap: 0 40px;
-  padding: 40px 40px 25px 40px;
-  &:nth-child(1),&:nth-child(2) {
-    flex: 1 0 calc(50% - 20px);
+  .jokeBlock {  
     @media (max-width: 400px) {
       flex-basis: 100%;
+      padding: 20px 20px 20px 20px;
+      .id, .date {
+        flex: 0 1 100%;
+      }
     }
-  }
-  background: #FFF;
-  box-shadow: 0px 7px 25px 0px rgba(100, 100, 111, 0.20);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  .text {
-    flex: 0 1 100%;
-    width: 100%;
-    color: $main_color;
-    word-break: break-all;
-  }
-  .id, .date {
-    color: $second_color;
-    font-family: Montserrat, Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
-    font-size: 14px;
-    line-height: normal;    
-    padding-top: 30px;
-  }
-  .id {    
-    word-break: break-all;
+    text-decoration: none;
+    animation: jokesIn 200ms;
+    flex: 1 0 calc(33% - 40px);
+    gap: 0 40px;
+    padding: 40px 40px 25px 40px;
+    &:nth-child(1),&:nth-child(2) {
+      @media (max-width: 400px) {
+        flex-basis: 100%;
+      }
+      flex: 1 0 calc(50% - 20px);
+    }
+    background: #FFF;
+    box-shadow: 0px 7px 25px 0px rgba(100, 100, 111, 0.20);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .text {
+      flex: 0 1 100%;
+      width: 100%;
+      color: $main_color;
+      word-break: break-all;
+    }
+    .id, .date {
+      color: $second_color;
+      font-size: 14px;
+      line-height: normal;    
+      padding-top: 30px;
+    }
+    .id {    
+      word-break: break-all;
+    }
   }
 }

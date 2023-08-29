@@ -1,3 +1,3 @@
-const urlApi = "https://api.chucknorris.io/jokes/search";
+const urlApi = "https://api.chucknorris.io/jokes/search"
 
-export default urlApi;
+export default urlApi

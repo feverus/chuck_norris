@@ -3,13 +3,3 @@ GET https://api.chucknorris.io/jokes/search?query=car
 
 
 ###
-
-POST http://2ite
-content-type: application/json
-
-{
-  "foo": "bar",
-}
-
-
-###
