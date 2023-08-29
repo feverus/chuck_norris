@@ -5,4 +5,4 @@ export default
 	inject('searchDataStore')
 	(observer(Content));
 
-export type { StateType, ApiType, UseContent } from './content.props'
+export type { UseContent } from './content.props'
