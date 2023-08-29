@@ -1,11 +1,19 @@
 import searchDataStore from '~Store/searchDataStore'
-import useContent from "./content.service";
 import C from './content.module.scss'
+import { Joke } from './joke'
 
 export function Content() {
-	const [state, api] = useContent() 
-
 	return (
-		<>hello</>
+		searchDataStore.searchData.length > 0 ? 
+			<div className={C.jokes}>
+			{searchDataStore.searchData.map(item => 
+				<Joke
+					item={item}
+					key={item.id}
+				/>)
+			}		
+			</div>
+			:
+			<></>
 	)
 }

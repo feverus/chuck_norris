@@ -11,15 +11,16 @@ body {
 	background: $main_bg_color;
 	padding: 0%;
 	margin: 0;
-	font-family: Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+	font-family: Fira Sans, Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 20px;
+	line-height: 30px;
 }
 main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	flex-wrap: nowrap;
+	overflow-x: hidden;
 }
