@@ -1,1 +1,38 @@
 @import '../../global.modules.scss';
+
+.defaultwidth {
+  width: min(626px, calc(100% - 30px));
+}
+
+.search {
+  @extend .defaultwidth;
+  margin-top: 128px; 
+  height: 64px;
+  filter: drop-shadow(0px 7px 12px rgba(100, 100, 111, 0.20));
+  input {
+    color: $accent_color;
+    text-align: left;
+    font-family: Fira Sans, Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 19px 36px;
+    width: 100%;
+    border: none;
+    outline:none;
+    &::placeholder {color: $accent_color;}
+  }
+}
+.status {
+  @extend .defaultwidth;
+  margin-top: 20px;
+  color: $main_color;
+  text-align: left;
+  font-family: Montserrat, Roboto, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 36px;
+}

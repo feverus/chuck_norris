@@ -2,7 +2,6 @@ import {makeAutoObservable, observable, action} from 'mobx'
 import * as I from '~Store/storeInterfaces'
 
 export class SearchDataStore {
-	total: number = 0
 	searchData:I.ApiSearchDataItem[] = []
 
 	constructor() {
@@ -14,9 +13,8 @@ export class SearchDataStore {
 		)
 	}
 	
-	setSearchData(data:I.ApiSearchData) {
-			this.searchData = data.result
-			this.total = data.total
+	setSearchData(data:I.ApiSearchDataItem[]) {
+			this.searchData = data
 	}
 }
 

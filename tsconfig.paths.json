@@ -4,6 +4,7 @@
       "paths": {
         "~/*": [ "./src/*" ],
         "~Api/*": [ "./src/api/*" ],
+        "~Lib/*": [ "./src/lib/*" ],
         "~Store/*": [ "./src/store/*" ],
         "~Components/*": [ "./src/components/*" ],
       }

@@ -1,11 +1,12 @@
 import * as I from '~Store/storeInterfaces';
 
 export type StateType = {
-    sample: number;
+    status: string;
+    inputRef: React.RefObject<HTMLInputElement>;
 };
 
 export type ApiType = {
-    sampleApi: () => void;
+    handleInput: (value: string) => void;
 };
 
 export type UseSearchPrompt = () => [
